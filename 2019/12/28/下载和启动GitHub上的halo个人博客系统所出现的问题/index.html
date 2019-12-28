@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>下载和启动GitHub上的halo个人博客系统所出现的问题  | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="将halo源代码从GitHub上下载过程中出现的问题： 下载速度过慢导致下载失败出现clone failed：我尝试过更改hosts地址，然后刷新DNS的方法，失败，这个方法越来越难用了。 最好的办法就是在码云平台上新建一个仓库，选择导入已有仓库，将GitHub上的项目下载地址直接复制在新建的仓库中，然后创建。接着进入仓库点击克隆下载按钮，这样下载速度就会大大提高。   参考文献：https:&#x2F;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="下载和启动GitHub上的halo个人博客系统所出现的问题 ">
+<meta property="og:url" content="http://yoursite.com/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="将halo源代码从GitHub上下载过程中出现的问题： 下载速度过慢导致下载失败出现clone failed：我尝试过更改hosts地址，然后刷新DNS的方法，失败，这个方法越来越难用了。 最好的办法就是在码云平台上新建一个仓库，选择导入已有仓库，将GitHub上的项目下载地址直接复制在新建的仓库中，然后创建。接着进入仓库点击克隆下载按钮，这样下载速度就会大大提高。   参考文献：https:&#x2F;&#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/jianxing02/image_store/master/C%3A%5CUsers%5C24468%5CGitHub%5Cimage_store20191208161007.png">
+<meta property="article:published_time" content="2019-12-28T04:12:45.000Z">
+<meta property="article:modified_time" content="2019-12-28T04:13:38.830Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jianxing02/image_store/master/C%3A%5CUsers%5C24468%5CGitHub%5Cimage_store20191208161007.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-下载和启动GitHub上的halo个人博客系统所出现的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2019-12-28T04:12:45.000Z" itemprop="datePublished">2019-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      下载和启动GitHub上的halo个人博客系统所出现的问题 
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="将halo源代码从GitHub上下载过程中出现的问题："><a href="#将halo源代码从GitHub上下载过程中出现的问题：" class="headerlink" title="将halo源代码从GitHub上下载过程中出现的问题："></a>将halo源代码从GitHub上下载过程中出现的问题：</h3><ul>
+<li><h6 id="下载速度过慢导致下载失败出现clone-failed："><a href="#下载速度过慢导致下载失败出现clone-failed：" class="headerlink" title="下载速度过慢导致下载失败出现clone failed："></a>下载速度过慢导致下载失败出现clone failed：</h6><p>我尝试过更改hosts地址，然后刷新DNS的方法，失败，这个方法越来越难用了。</p>
+<p>最好的办法就是在码云平台上新建一个仓库，选择导入已有仓库，将GitHub上的项目下载地址直接复制在新建的仓库中，然后创建。接着进入仓库点击克隆下载按钮，这样下载速度就会大大提高。</p>
+</li>
+</ul>
+<p>参考文献：<a href="https://www.jianshu.com/p/834e85d1c6b6" target="_blank" rel="noopener">https://www.jianshu.com/p/834e85d1c6b6</a></p>
+<hr>
+<h3 id="项目下载好了后在IDEA中跑不起来出现Lombok报错问题："><a href="#项目下载好了后在IDEA中跑不起来出现Lombok报错问题：" class="headerlink" title="项目下载好了后在IDEA中跑不起来出现Lombok报错问题："></a>项目下载好了后在IDEA中跑不起来出现Lombok报错问题：</h3><h6 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h6><p>Mac OS系统在preferences里的plugins搜索Lombok插件下载。并在Build，Execution，Deployment中的Compiler菜单    下的Annotation Processors对Halo项目勾选Enable Annotation Processors，最后点击Apply按钮和OK，重启IDEA。</p>
+<p>Windows系统则是在左上角的File中settings中，找到其中的plugins搜索Lombok插件下载，接着就是在Build，Execution，Deployment中的Compiler菜单下的Annotation Processors对halo项目里勾选Enable Annotation Processors，最好点击OK按钮重启IDEA。</p>
+<h6 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h6><p>如若还是报错在项目的build.gradle文件的依赖项dependencies{ }中添加语句：<br>compile”org.projectlombok:lombok:1.18.8”<br>annotationProcessor “org.projectlombok:lombok:1.18.8”<br>如图:<br><img src="https://raw.githubusercontent.com/jianxing02/image_store/master/C%3A%5CUsers%5C24468%5CGitHub%5Cimage_store20191208161007.png" alt=""></p>
+<p>参考文献：<a href="https://blog.csdn.net/melinmmm/article/details/93118855" target="_blank" rel="noopener">https://blog.csdn.net/melinmmm/article/details/93118855</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="ck4p2rd7n0001ssuvfl8a1bgg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexo博客搭建教程
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">hexo博客搭建教程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/">下载和启动GitHub上的halo个人博客系统所出现的问题 </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

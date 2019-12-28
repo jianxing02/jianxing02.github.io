@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-hexo博客搭建教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2019-12-28T04:15:05.000Z" itemprop="datePublished">2019-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">hexo博客搭建教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="安装hexo博客的步骤："><a href="#安装hexo博客的步骤：" class="headerlink" title="安装hexo博客的步骤："></a>安装hexo博客的步骤：</h4><ul>
+<li><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js:"></a>安装Node.js:</h3><p>官网下载node.js，一路next安装就完事了。</p>
+<p>安装完成后会有两个组件：一个是node.js本身，一个是npm包库。</p>
+<p>安装完成了在自己电脑Win+R输入cmd打开控制台输入node -v查看node版本，输入npm -v查看npm版本，显示出来则表示安装成功。</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="添加国内镜像源："><a href="#添加国内镜像源：" class="headerlink" title="添加国内镜像源："></a>添加国内镜像源：</h3><p>因为在国内使用npm下载通常速度都是非常慢的，如果不能科学上网的话将npm换成淘宝的镜像源。</p>
+<p>在控制台输入npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+<p>安装后</p>
+</li>
+<li><h3 id="注册GitHub账号"><a href="#注册GitHub账号" class="headerlink" title="注册GitHub账号"></a>注册GitHub账号</h3></li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>Git是一个工具，代码管理工具。GitHub是基于git打造的社区。hexo博客要与GitHub连接，将内容提交到GitHub上去，所以Git安装是必须的。</p>
+<p>直接去Git官网<a href="https://www.git-scm.com/download/下载最新版本的Git。" target="_blank" rel="noopener">https://www.git-scm.com/download/下载最新版本的Git。</a></p>
+<p>安装完毕后要进行Git的环境配置：</p>
+<p>在桌面右键打开GitBash，这个就和cmd控制台一样的。</p>
+<ol>
+<li><p>在GitBash输入：</p>
+<p>git config –global user.name “你注册GitHub时的账户名” </p>
+<p>git config –global user.email “你注册GitHub时用的邮箱”</p>
+</li>
+<li><p>生成ssh：</p>
+<p>继续刚才的操作，命令框输入ssh-keygen -t rsa，然后连敲三次回车键，结束后去系统盘目录下（一般在 C:\Users\你的用户名.ssh）(mac: /Users/用户/.ssh）查看是否有。ssh文件夹生成，此文件夹中以下两个文件，如图：</p>
+<p><img src="https://raw.githubusercontent.com/eryajf/t/master/C:%5CUsers%5C24468%5CGitHub%5Cimage_store20191212212546.png" alt=""></p>
+<p>将ssh文件夹中的公钥（ 打开id_rsa.pub）添加到GitHub管理平台中，在GitHub的个人账户的设置中找到如下界面。打不开命令框输入cat ~/.ssh/id_rsa.pub获取。</p>
+<p><img src="https://raw.githubusercontent.com/eryajf/t/master/C:%5CUsers%5C24468%5CGitHub%5Cimage_store20191212213421.png" alt=""></p>
+<p>title随便起一个，将公钥（ id_rsa.pub）文件中内容复制粘贴到key中，然后点击Ass SSH key就成了。</p>
+<p>完成后测试一下配置是否成功，在Git Bush命令框（就是刚才配置账号和邮箱的命令框）中继续输入以下命令，回车，出现自己的名字就成功了。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="安装Git以及环境配置参考文章：https-blog-csdn-net-huangqqdy-article-details-83032408"><a href="#安装Git以及环境配置参考文章：https-blog-csdn-net-huangqqdy-article-details-83032408" class="headerlink" title="安装Git以及环境配置参考文章：https://blog.csdn.net/huangqqdy/article/details/83032408"></a>安装Git以及环境配置参考文章：<a href="https://blog.csdn.net/huangqqdy/article/details/83032408" target="_blank" rel="noopener">https://blog.csdn.net/huangqqdy/article/details/83032408</a></h4><hr>
+<ul>
+<li><h3 id="正式安装hexo"><a href="#正式安装hexo" class="headerlink" title="正式安装hexo"></a>正式安装hexo</h3><ul>
+<li><p>安装hexo博客并初始化生成静态界面</p>
+<ol>
+<li><p>新建一个存放hexo文件的文件夹，在GitBash输入mkdir <strong>**（文件夹名），输入cd *</strong>就是进入文件夹。</p>
+</li>
+<li><p>在自己存放hexo的根目录下右键打开GitBash，输入npm i hexo-cli -g<br>安装好了后输入hexo -v查看是否成功。</p>
+</li>
+<li><p>安装插件：npm install</p>
+</li>
+<li><p>初始化hexo博客：输入hexo init 初始化博客，初始化好了后在自己创建的文件夹中可以看到生成的hexo文件。</p>
+</li>
+<li><p>打开博客：hexo s打开博客，会出现一个叫 localhost：400的网址，在浏览器打开则能进入博客。（这个暂时只能你自己看，要想被他人访问必须部署到远端。），hexo自动生成一篇名字叫Hello World的博客。</p>
+<p><img src="https://raw.githubusercontent.com/eryajf/t/master/C:%5CUsers%5C24468%5CGitHub%5Cimage_store20191228113725.png" alt=""></p>
+</li>
+<li><p>各个指令：hexo s启动博客，hexo g生成博客 ，ctrl+c关闭本地服务器。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h3><p>1.GitHub新建一个仓库用来存放hexo文件：New repository，如下图：</p>
+<p>2.仓库名称设置一定要输入自己的项目名字，后面加.github.io。之后生成的仓库界面先放着不动。</p>
+<p>3.GitBash输入npm install  <code>--</code>save  hexo-deployer-git</p>
+<p>4.打开博客根目录下的_config.yml文件。如图：</p>
+<p><img src="https://raw.githubusercontent.com/eryajf/t/master/C:%5CUsers%5C24468%5CGitHub%5Cimage_store20191212214127.png" alt=""></p>
+<p>打开该文件拖到最底下修改，如图：</p>
+<p><img src="https://raw.githubusercontent.com/eryajf/t/master/C:%5CUsers%5C24468%5CGitHub%5Cimage_store20191212214347.png" alt=""></p>
+<p>每个冒号后面要加空格。</p>
+<p>repo填仓库链接，这样博客就和GitHub连接起来了。hexo g，hexo s,没问题hexo d.  如果要输入用户密码就是输GitHub的账号和密码  访问网址为：用户名.github.io</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><p>写博客是使用markdown格式来写博客的，下载一款md编写软件，推荐Typora。在git bash输入hexo n “文章名字” ，然后打开hexo根目录，打开source文件夹里面包含的_posts文件夹，找到新建的文章进去编辑。然后再GitBash输入 hexo g 生成，然后再输入 hexo s 在本地浏览，没问题后 ctrl+c 退出后再输入hexo d 部署到GitHub仓库里，这样自己和其他人都可以浏览文章了。</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="更改hexo博客的主题"><a href="#更改hexo博客的主题" class="headerlink" title="更改hexo博客的主题"></a>更改hexo博客的主题</h3><ol>
+<li><p>本次使用的主题以<a href="https://github.com/litten/hexo-theme-yilia主题为示范。(输入指令中间有空格，都有空格，注意看仔细！)" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia主题为示范。(输入指令中间有空格，都有空格，注意看仔细！)</a></p>
+<p>在GitBash输入指令 git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+<p>回车后就会向 themes/yilia这个目录克隆，打开hexo根目录可以看到。</p>
+<p>下载速度慢可以在码云注册，然后新建仓库再导入仓库。成功后再下载，速度很快。</p>
+<h4 id="参考文章：https-www-jianshu-com-p-e9cd66d2116f"><a href="#参考文章：https-www-jianshu-com-p-e9cd66d2116f" class="headerlink" title="参考文章：https://www.jianshu.com/p/e9cd66d2116f"></a>参考文章：<a href="https://www.jianshu.com/p/e9cd66d2116f" target="_blank" rel="noopener">https://www.jianshu.com/p/e9cd66d2116f</a></h4></li>
+<li><p>进入根目录中，找到_config.yml文件进去编辑，找到其中的theme，修改成yilia主题，如图：</p>
+<p><img src="https://raw.githubusercontent.com/eryajf/t/master/C:%5CUsers%5C24468%5CGitHub%5Cimage_store20191212222330.png" alt=""></p>
+<p>修改好了后GitBash输入 hexo clean 清理一下缓存，然后输入 hexo g ，再 hexo s 在本地查看，无问题后ctrl+s退出再输入 hexo d 部署到GitHub 。</p>
+<p>hexo主题更换的方法差不多就是这样子，其他的都大差不差、换汤不换药。<br>yilia这个主题后面有点设置需要自己去设置，可以参照下面两篇文章：<br><a href="https://www.jianshu.com/p/f6f19b02c661" target="_blank" rel="noopener">https://www.jianshu.com/p/f6f19b02c661</a><br><a href="https://blog.csdn.net/lynnbest/article/details/79845944" target="_blank" rel="noopener">https://blog.csdn.net/lynnbest/article/details/79845944</a></p>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="搭建hexo博客参考视频和文献"><a href="#搭建hexo博客参考视频和文献" class="headerlink" title="搭建hexo博客参考视频和文献"></a>搭建hexo博客参考视频和文献</h3><h4 id="参考视频："><a href="#参考视频：" class="headerlink" title="参考视频："></a>参考视频：</h4><h4 id="https-www-bilibili-com-video-av44544186-t-440"><a href="#https-www-bilibili-com-video-av44544186-t-440" class="headerlink" title="https://www.bilibili.com/video/av44544186?t=440"></a><a href="https://www.bilibili.com/video/av44544186?t=440" target="_blank" rel="noopener">https://www.bilibili.com/video/av44544186?t=440</a></h4><h4 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h4><p><a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-5" target="_blank" rel="noopener">https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-5</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" data-id="ck4p2rd7h0000ssuv2k743s8t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-下载和启动GitHub上的halo个人博客系统所出现的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2019-12-28T04:12:45.000Z" itemprop="datePublished">2019-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/">下载和启动GitHub上的halo个人博客系统所出现的问题 </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="将halo源代码从GitHub上下载过程中出现的问题："><a href="#将halo源代码从GitHub上下载过程中出现的问题：" class="headerlink" title="将halo源代码从GitHub上下载过程中出现的问题："></a>将halo源代码从GitHub上下载过程中出现的问题：</h3><ul>
+<li><h6 id="下载速度过慢导致下载失败出现clone-failed："><a href="#下载速度过慢导致下载失败出现clone-failed：" class="headerlink" title="下载速度过慢导致下载失败出现clone failed："></a>下载速度过慢导致下载失败出现clone failed：</h6><p>我尝试过更改hosts地址，然后刷新DNS的方法，失败，这个方法越来越难用了。</p>
+<p>最好的办法就是在码云平台上新建一个仓库，选择导入已有仓库，将GitHub上的项目下载地址直接复制在新建的仓库中，然后创建。接着进入仓库点击克隆下载按钮，这样下载速度就会大大提高。</p>
+</li>
+</ul>
+<p>参考文献：<a href="https://www.jianshu.com/p/834e85d1c6b6" target="_blank" rel="noopener">https://www.jianshu.com/p/834e85d1c6b6</a></p>
+<hr>
+<h3 id="项目下载好了后在IDEA中跑不起来出现Lombok报错问题："><a href="#项目下载好了后在IDEA中跑不起来出现Lombok报错问题：" class="headerlink" title="项目下载好了后在IDEA中跑不起来出现Lombok报错问题："></a>项目下载好了后在IDEA中跑不起来出现Lombok报错问题：</h3><h6 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h6><p>Mac OS系统在preferences里的plugins搜索Lombok插件下载。并在Build，Execution，Deployment中的Compiler菜单    下的Annotation Processors对Halo项目勾选Enable Annotation Processors，最后点击Apply按钮和OK，重启IDEA。</p>
+<p>Windows系统则是在左上角的File中settings中，找到其中的plugins搜索Lombok插件下载，接着就是在Build，Execution，Deployment中的Compiler菜单下的Annotation Processors对halo项目里勾选Enable Annotation Processors，最好点击OK按钮重启IDEA。</p>
+<h6 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h6><p>如若还是报错在项目的build.gradle文件的依赖项dependencies{ }中添加语句：<br>compile”org.projectlombok:lombok:1.18.8”<br>annotationProcessor “org.projectlombok:lombok:1.18.8”<br>如图:<br><img src="https://raw.githubusercontent.com/jianxing02/image_store/master/C%3A%5CUsers%5C24468%5CGitHub%5Cimage_store20191208161007.png" alt=""></p>
+<p>参考文献：<a href="https://blog.csdn.net/melinmmm/article/details/93118855" target="_blank" rel="noopener">https://blog.csdn.net/melinmmm/article/details/93118855</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="ck4p2rd7n0001ssuvfl8a1bgg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">hexo博客搭建教程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/28/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%90%AF%E5%8A%A8GitHub%E4%B8%8A%E7%9A%84halo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%89%80%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/">下载和启动GitHub上的halo个人博客系统所出现的问题 </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
